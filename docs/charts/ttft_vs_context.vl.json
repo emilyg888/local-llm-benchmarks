@@ -31,7 +31,7 @@
       "field": "ttft_seconds",
       "type": "quantitative",
       "title": "Time to first token (seconds)",
-      "axis": { "tickCount": 6, "grid": true }
+      "scale": { "nice": true, "zero": false }
     },
     "color": { "field": "model_family", "type": "nominal", "title": "Model family" },
     "shape": { "field": "quant", "type": "nominal", "title": "Quant" },

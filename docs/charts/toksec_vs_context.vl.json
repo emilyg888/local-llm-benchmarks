@@ -25,13 +25,13 @@
       "field": "context_tokens",
       "type": "quantitative",
       "title": "Context length (tokens)",
-      "axis": { "tickCount": 6, "grid": true }
+      "scale": { "nice": true, "zero": false }
     },
     "y": {
       "field": "tokens_per_sec",
       "type": "quantitative",
       "title": "Throughput (tokens/sec)",
-      "axis": { "tickCount": 6, "grid": true }
+      "scale": { "nice": true, "zero": false }
     },
     "color": { "field": "model_family", "type": "nominal", "title": "Model family" },
     "shape": { "field": "quant", "type": "nominal", "title": "Quant" },
