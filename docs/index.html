@@ -99,8 +99,12 @@
       }
     };
 
-    vegaEmbed("#chart_toksec", SPEC_TOKSEC, OPTS).catch(console.error);
-    vegaEmbed("#chart_ttft", SPEC_TTFT, OPTS).catch(console.error);
+    vegaEmbed("#chart_toksec", "charts/toksec_vs_context.vl.json", { actions: true })
+      .catch(err => console.error("TOKSEC ERROR:", err));
+
+    vegaEmbed("#chart_ttft", "charts/ttft_vs_context.vl.json", { actions: true })
+      .catch(err => console.error("TTFT ERROR:", err));
+
   </script>
 </body>
 </html>
