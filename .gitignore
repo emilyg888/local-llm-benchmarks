@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Editor / OS
+.vscode/
+*.swp
+
+# Python (if you add scripts later)
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Node (if you add JS tooling later)
+node_modules/
+
+# Build artifacts (optional)
+dist/
+build/

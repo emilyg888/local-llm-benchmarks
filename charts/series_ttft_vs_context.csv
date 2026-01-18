@@ -1,0 +1,7 @@
+series,context_tokens,ttft_seconds
+DeepSeek-Coder-V2-Lite Q8_0,4096,6.4
+DeepSeek-Coder-V2-Lite Q4_K_M,2048,3.5
+DeepSeek-Coder-V2-Lite Q4_K_M,4096,6.2
+Qwen3-4B Kimi-K2 Thinking Q8,4096,4.85
+Qwen3-VI-4B Q4,4096,2.97
+Qwen3-VL-4B Q4,2048,2.23

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Local LLM Benchmark — Vega-Lite Charts</title>
+
+  <!-- Vega / Vega-Lite / Vega-Embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <style>
+    :root { color-scheme: light; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 28px;
+      line-height: 1.45;
+      background: #fff;
+      color: #111;
+    }
+    header {
+      max-width: 980px;
+      margin: 0 auto 18px auto;
+    }
+    h1 { font-size: 22px; margin: 0 0 6px 0; }
+    p.meta { margin: 0; color: #444; font-size: 14px; }
+    .wrap {
+      max-width: 980px;
+      margin: 18px auto 0 auto;
+      display: grid;
+      gap: 22px;
+    }
+    .card {
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      padding: 14px 14px 6px 14px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .card h2 {
+      font-size: 16px;
+      margin: 0 0 10px 0;
+      font-weight: 600;
+    }
+    .chart {
+      width: 100%;
+    }
+    footer {
+      max-width: 980px;
+      margin: 18px auto 0 auto;
+      color: #555;
+      font-size: 13px;
+    }
+    code.path {
+      background: #f6f6f6;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Local LLM Benchmark (Apple Silicon · LM Studio)</h1>
+    <p class="meta">
+      Interactive charts rendered with Vega-Lite. Data source: <code class="path">charts/points.csv</code>
+    </p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Tokens/sec vs Context Length</h2>
+      <div id="chart_toksec" class="chart"></div>
+    </section>
+
+    <section class="card">
+      <h2>TTFT vs Context Length</h2>
+      <div id="chart_ttft" class="chart"></div>
+    </section>
+  </main>
+
+  <footer>
+    Notes: Results are second-run (warm) measurements. Absolute values are hardware-dependent; trends are the main signal.
+  </footer>
+
+  <script>
+    // Paths are relative to docs/index.html
+    const SPEC_TOKSEC = "../charts/toksec_vs_context.vl.json";
+    const SPEC_TTFT   = "../charts/ttft_vs_context.vl.json";
+
+    // Embed options
+    const OPTS = {
+      actions: {
+        export: true,
+        source: false,
+        compiled: false,
+        editor: true
+      }
+    };
+
+    vegaEmbed("#chart_toksec", SPEC_TOKSEC, OPTS).catch(console.error);
+    vegaEmbed("#chart_ttft", SPEC_TTFT, OPTS).catch(console.error);
+  </script>
+</body>
+</html>
