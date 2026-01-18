@@ -19,7 +19,7 @@
   },
   "width": 780,
   "height": 420,
-  "mark": { "type": "point", "filled": true, "size": 140 },
+  "mark": { "type": "point", "size": 140 },
   "encoding": {
     "x": {
       "field": "context_tokens",
