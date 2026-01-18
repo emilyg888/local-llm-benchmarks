@@ -40,15 +40,4 @@
       { "field": "ttft_seconds", "type": "quantitative", "title": "TTFT (s)" },
       { "field": "output_tokens", "type": "quantitative", "title": "Output tokens" }
     ]
-  },
-  "selection": {
-    "family": { "type": "multi", "fields": ["model_family"], "bind": "legend" }
-  },
-  "transform": [
-    { "filter": { "selection": "family" } }
-  ],
-  "config": {
-    "axis": { "labelFontSize": 12, "titleFontSize": 13 },
-    "legend": { "labelFontSize": 12, "titleFontSize": 12 }
   }
-}

@@ -40,6 +40,4 @@
       { "field": "tokens_per_sec", "type": "quantitative", "title": "tok/sec" },
       { "field": "output_tokens", "type": "quantitative", "title": "Output tokens" }
     ]
-  },
-  "selection": {
-    "family": { "type": "multi",
+  }
