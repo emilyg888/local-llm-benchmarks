@@ -1,0 +1,7 @@
+run_id,model_family,model,quant,context_tokens,tokens_per_sec,ttft_seconds,output_tokens
+ds_q8_4096,DeepSeek,DeepSeek-Coder-V2-Lite,Q8_0,4096,15.4,6.4,596
+ds_q4km_4096,DeepSeek,DeepSeek-Coder-V2-Lite,Q4_K_M,4096,16.0,6.2,597
+ds_q4km_2048,DeepSeek,DeepSeek-Coder-V2-Lite,Q4_K_M,2048,22.0,3.5,596
+qwen_k2_4096,Qwen,Qwen3-4B-2507 Kimi-K2 Thinking,Q8,4096,24.37,4.85,2295
+qwen_vi_4096,Qwen,Qwen3-VI-4B,Q4,4096,39.78,2.97,651
+qwen_vl_2048,Qwen,Qwen3-VL-4B,Q4,2048,41.84,2.23,651

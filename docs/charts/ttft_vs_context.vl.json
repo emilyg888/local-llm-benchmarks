@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Local LLM benchmark: Time-to-first-token (TTFT) vs Context Length (LM Studio on Apple Silicon).",
+  "data": { "url": "points.csv" },
+  "title": {
+    "text": "TTFT vs Context Length (Local LLM Benchmark)",
+    "subtitle": "Second-run (warm) results • LM Studio (Metal) • Apple Silicon"
+  },
+  "width": 780,
+  "height": 420,
+  "mark": { "type": "point", "filled": true, "size": 140 },
+  "encoding": {
+    "x": {
+      "field": "context_tokens",
+      "type": "quantitative",
+      "title": "Context length (tokens)",
+      "axis": { "tickCount": 6, "grid": true }
+    },
+    "y": {
+      "field": "ttft_seconds",
+      "type": "quantitative",
+      "title": "Time to first token (seconds)",
+      "axis": { "tickCount": 6, "grid": true }
+    },
+    "color": {
+      "field": "model_family",
+      "type": "nominal",
+      "title": "Model family"
+    },
+    "shape": {
+      "field": "quant",
+      "type": "nominal",
+      "title": "Quant"
+    },
+    "tooltip": [
+      { "field": "model", "type": "nominal", "title": "Model" },
+      { "field": "quant", "type": "nominal", "title": "Quant" },
+      { "field": "context_tokens", "type": "quantitative", "title": "Context" },
+      { "field": "ttft_seconds", "type": "quantitative", "title": "TTFT (s)" },
+      { "field": "tokens_per_sec", "type": "quantitative", "title": "tok/sec" },
+      { "field": "output_tokens", "type": "quantitative", "title": "Output tokens" }
+    ]
+  },
+  "selection": {
+    "family": { "type": "multi",
