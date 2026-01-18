@@ -10,32 +10,31 @@
   "height": 420,
   "mark": { "type": "point", "filled": true, "size": 140 },
   "encoding": {
-  "x": {
-    "field": "context_tokens",
-    "type": "quantitative",
-    "title": "Context length (tokens)"
+    "x": {
+      "field": "context_tokens",
+      "type": "quantitative",
+      "title": "Context length (tokens)",
+      "axis": { "tickCount": 6, "grid": true }
+    },
+    "y": {
+      "field": "tokens_per_sec",
+      "type": "quantitative",
+      "title": "Throughput (tokens/sec)",
+      "axis": { "tickCount": 6, "grid": true }
+    },
+    "color": { "field": "model_family", "type": "nominal", "title": "Model family" },
+    "shape": { "field": "quant", "type": "nominal", "title": "Quant" },
+    "tooltip": [
+      { "field": "model", "type": "nominal", "title": "Model" },
+      { "field": "quant", "type": "nominal", "title": "Quant" },
+      { "field": "context_tokens", "type": "quantitative", "title": "Context" },
+      { "field": "tokens_per_sec", "type": "quantitative", "title": "Tokens/sec" },
+      { "field": "ttft_seconds", "type": "quantitative", "title": "TTFT (s)" },
+      { "field": "output_tokens", "type": "quantitative", "title": "Output tokens" }
+    ]
   },
-  "y": {
-    "field": "tokens_per_sec",
-    "type": "quantitative",
-    "title": "Throughput (tokens/sec)"
-  },
-  "color": {
-    "field": "model_family",
-    "type": "nominal",
-    "title": "Model family"
-  },
-  "shape": {
-    "field": "quant",
-    "type": "nominal",
-    "title": "Quant"
-  },
-  "tooltip": [
-    { "field": "model", "type": "nominal", "title": "Model" },
-    { "field": "quant", "type": "nominal", "title": "Quant" },
-    { "field": "context_tokens", "type": "quantitative", "title": "Context" },
-    { "field": "tokens_per_sec", "type": "quantitative", "title": "Tokens/sec" },
-    { "field": "ttft_seconds", "type": "quantitative", "title": "TTFT (s)" },
-    { "field": "output_tokens", "type": "quantitative", "title": "Output tokens" }
-  ]
+  "config": {
+    "axis": { "labelFontSize": 12, "titleFontSize": 13 },
+    "legend": { "labelFontSize": 12, "titleFontSize": 12 }
+  }
 }
