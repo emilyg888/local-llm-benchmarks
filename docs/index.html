@@ -89,11 +89,9 @@
   </footer>
 
   <script>
-    // Paths are relative to docs/index.html
     const SPEC_TOKSEC = "charts/toksec_vs_context.vl.json";
     const SPEC_TTFT   = "charts/ttft_vs_context.vl.json";
 
-    // Embed options
     const OPTS = {
       actions: {
         export: true,
@@ -103,12 +101,12 @@
       }
     };
 
-    vegaEmbed("#chart_toksec", "charts/toksec_vs_context.vl.json", { actions: true })
+    vegaEmbed("#chart_toksec", SPEC_TOKSEC, OPTS)
       .catch(err => console.error("TOKSEC ERROR:", err));
 
-    vegaEmbed("#chart_ttft", "charts/ttft_vs_context.vl.json", { actions: true })
+    vegaEmbed("#chart_ttft", SPEC_TTFT, OPTS)
       .catch(err => console.error("TTFT ERROR:", err));
+</script>
 
-  </script>
 </body>
 </html>
