@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Local LLM benchmark: Tokens/sec vs Context Length (LM Studio on Apple Silicon).",
-  "data": { "url": "points.csv" },
+  "data": { "url": "../charts/points.csv" },
   "title": {
     "text": "Tokens/sec vs Context Length (Local LLM Benchmark)",
     "subtitle": "Second-run (warm) results • LM Studio (Metal) • Apple Silicon"
